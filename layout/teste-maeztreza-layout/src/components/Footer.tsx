@@ -17,6 +17,9 @@ import {
     SocialMediaIcons,
     PaymentIcons,
     FooterCredit,
+    FooterLinks,
+    CreditsFirstImg,
+    CreditsSecondImg,
 } from '../styles/FooterStyles';
 
 interface FooterSection {
@@ -78,21 +81,23 @@ const Footer = () => {
 
     return (
         <FooterContainer>
-            {footerSections.map(section => (
-                <FooterSection key={section.title}>
-                    <FooterTitle onClick={() => toggleLinksVisibility(section.title)}>
-                        {section.title} {!isDesktop && '+'}
-                    </FooterTitle>
-                    {(isDesktop || section.isLinksVisible) && (
-                        <FooterContent>
-                            {section.links?.map(link => (
-                                <a key={link} href="#">{link}</a>
-                            ))}
-                        </FooterContent>
-                    )}
-                </FooterSection>
-            ))}
-            
+            <FooterLinks>
+                {footerSections.map(section => (
+                    <FooterSection key={section.title}>
+                        <FooterTitle onClick={() => toggleLinksVisibility(section.title)}>
+                            <span>{section.title}</span> 
+                            <span>{!isDesktop && '+'}</span>
+                        </FooterTitle>
+                        {(isDesktop || section.isLinksVisible) && (
+                            <FooterContent>
+                                {section.links?.map(link => (
+                                    <a key={link} href="#">{link}</a>
+                                ))}
+                            </FooterContent>
+                        )}
+                    </FooterSection>
+                ))}
+            </FooterLinks>
             <FooterIconsSection>
                 <SocialMediaIcons>
                     <img src={FacebookIcon} alt="Facebook" />
@@ -108,12 +113,12 @@ const Footer = () => {
                 </PaymentIcons>
                 <FooterCredit>
                     <div>
-                        <img src={VtexIcon} alt="Icone Vtex" />
                         <span>Powered by VTEX</span>
+                        <CreditsFirstImg src={VtexIcon} alt="Icone Vtex" />
                     </div>
                     <div>
-                        <img src={MaeztraIcon} alt="Icone Maeztra" />
                         <span>Developed by MAEZTRA</span>
+                        <CreditsSecondImg src={MaeztraIcon} alt="Icone Maeztra" />
                     </div>
                 </FooterCredit>
             </FooterIconsSection>

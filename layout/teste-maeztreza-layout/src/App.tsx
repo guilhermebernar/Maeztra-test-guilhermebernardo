@@ -33,17 +33,20 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <Header />
-        {/* <main>
-          <MainBanner/>
+        {/* 
+        <MainBanner/>
+        <main>
           <PromoSection />
           <PartnerBrands />
           <FeaturedProducts />
         </main>
         <PromotionalBlock />
-        <Newsletter />*/}
+        <Newsletter />
+        */}
         <Footer /> 
 
         {showModal && <Modal onClose={handleCloseModal} />}
+      
       </ThemeProvider>
     </div>
   );
