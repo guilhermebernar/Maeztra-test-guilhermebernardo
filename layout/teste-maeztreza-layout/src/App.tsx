@@ -8,6 +8,8 @@ import Header from './components/Header';
 // import PromotionalBlock from './components/PromotionalBlock'
 // import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './theme';
 
 
 function App() {
@@ -29,19 +31,20 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      {/* <main>
-        <MainBanner/>
-        <PromoSection />
-        <PartnerBrands />
-        <FeaturedProducts />
-      </main>
-      <PromotionalBlock />
-      <Newsletter />*/}
-      <Footer /> 
+      <ThemeProvider theme={theme}>
+        <Header />
+        {/* <main>
+          <MainBanner/>
+          <PromoSection />
+          <PartnerBrands />
+          <FeaturedProducts />
+        </main>
+        <PromotionalBlock />
+        <Newsletter />*/}
+        <Footer /> 
 
-      {showModal && <Modal onClose={handleCloseModal} />}
-
+        {showModal && <Modal onClose={handleCloseModal} />}
+      </ThemeProvider>
     </div>
   );
 }

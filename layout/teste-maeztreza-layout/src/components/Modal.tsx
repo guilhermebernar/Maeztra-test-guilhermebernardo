@@ -1,6 +1,6 @@
 // components/Modal.tsx
 import React, { useState, useEffect } from 'react';
-import { StyledModalOverlay, StyledModalContent, StyledCloseButton } from '../styles/ModalStyle';
+import { StyledModalOverlay, StyledModalContent, StyledCloseButton, Icon1, Icon2, DeskTopImage, SendButton } from '../styles/ModalStyle';
 import ModalBanner from '../assets/Images/ModalBanner.png';
 import MailIcon from '../assets/MailIcon.svg';
 import SendIcon from '../assets/SendIcon.svg';
@@ -35,12 +35,15 @@ const Modal: React.FC<ModalProps> = ({ onClose }) => {
     <StyledModalOverlay>
       <StyledModalContent>
         {isDesktop && (
-          <img src={ModalBanner} alt="Promoção" />
+          <DeskTopImage src={ModalBanner} alt="Promoção" />
         )}
         <div>
-          <img src={MailIcon} alt="Icone de carta" />
+          <Icon1 src={MailIcon} alt="Icone de carta" />
           <h2>BEM VINDO À MAEZTRA</h2>
-          <p>Receba em Primeira mão desconto e ofertas exclusivas</p>
+          <h3>
+            <p>Receba em Primeira mão</p>
+            <span>desconto e ofertas exclusivas</span>
+          </h3>
           <form onSubmit={handleEmailSubmit}>
             <input 
               type="email"
@@ -49,13 +52,13 @@ const Modal: React.FC<ModalProps> = ({ onClose }) => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <button type="submit">
+            <SendButton type="submit">
               ENVIAR
-              <img src={SendIcon} alt="Icone do botão enviar" />
-            </button>
+              <Icon2 src={SendIcon} alt="Icone do botão enviar" />
+            </SendButton>
           </form>
+          <StyledCloseButton onClick={onClose}>Fechar</StyledCloseButton>
         </div>
-        <StyledCloseButton onClick={onClose}>Fechar</StyledCloseButton>
       </StyledModalContent>
     </StyledModalOverlay>
   );
