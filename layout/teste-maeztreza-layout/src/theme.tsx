@@ -8,6 +8,7 @@ export interface ITheme {
         white: string;
         black: string;
         gray: string;
+        graySecondary: string;
     };
     font: {
         primary: string;
@@ -23,7 +24,8 @@ export interface ITheme {
       tertiary: '#353535',
       white: '#FFF',
       black: '#000',
-      gray: '#C4C4C4'
+      gray: '#C4C4C4',
+      graySecondary:'#EFEFEF'
     },
     font: {
       primary: 'Titillium Web',
