@@ -34,6 +34,10 @@ export const Card = styled.div`
     @media (max-width: 768px) {
         height: 560px !important;
     }
+    @media (min-width: 1400px) {
+        height: 600px !important;
+    
+    }
 `;
 
 export const Image = styled.img`
@@ -78,8 +82,8 @@ export const Colors = styled.div`
 `;
 
 export const Color = styled.div`
-  width: 20px; 
-  height: 20px;
+  width: 27px; 
+  height: 27px;
   background-color: ${(props) => props.color};
   border: 1px solid ${(props) => props.color};
   border-radius: 4px;
@@ -88,8 +92,8 @@ export const Color = styled.div`
 
   &:hover {
     margin: 0;
-    width: 20px; 
-    height: 20px;
+    width: 27px; 
+    height: 27px;
     border-radius: 4px;
     border: 1px solid #000;
   }
