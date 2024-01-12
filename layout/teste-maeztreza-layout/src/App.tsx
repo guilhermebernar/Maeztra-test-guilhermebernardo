@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Modal from './components/Modal';
 import Header from './components/Header';
-// import MainBanner from './components/MainBanner'
+import MainBanner from './components/MainBanner'
 // import PromoSection from './components/PromoSection';
 // import PartnerBrands from './components/PartnerBrands';
 // import FeaturedProducts from './components/FeaturedProducts'; 
@@ -33,8 +33,8 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <Header />
-        {/* 
         <MainBanner/>
+        {/* 
         <main>
           <PromoSection />
           <PartnerBrands />

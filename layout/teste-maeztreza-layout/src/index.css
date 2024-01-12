@@ -50,4 +50,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.swiper-pagination-bullet{
+	background: transparent !important;
+	border: 2px solid #FAA500 !important;
+}
+
+.swiper-pagination-bullet-active{
+	background: #FAA500 !important;
+}
+
 }
