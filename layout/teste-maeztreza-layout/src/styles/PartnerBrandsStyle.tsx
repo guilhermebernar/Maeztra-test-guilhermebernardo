@@ -5,9 +5,7 @@ export const PartnerBrandsContainer = styled.div`
     margin: 30px auto 50px auto !important;
     width: 90%;
 
-    .partnerBrandsSwiper{
-        margin: 0 0 20px 0 !important;
-    }
+    
     
     @media (max-width: 768px) {
         width: 100%;

@@ -27,7 +27,7 @@ const cardData = [
     {
       icon: returnIcon,
       title: "Trocas Garantidas",
-      description: "Trocas em até 30 dias, sem dores de cabeça."
+      description: "Trocas em até 30 dias."
     },
     {
       icon: discontIcon,
@@ -37,7 +37,7 @@ const cardData = [
     {
       icon: truckIcon,
       title: "Frete Grátis",
-      description: "Em compras a partir de R$ 400,00"
+      description: "A partir de R$ 400,00"
     },
   ];
 

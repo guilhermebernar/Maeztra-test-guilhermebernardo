@@ -1,16 +1,15 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Modal from './components/Modal';
 import Header from './components/Header';
 import MainBanner from './components/MainBanner'
 import WhyBuy from './components/WhyBuy';
 import PartnerBrands from './components/PartnerBrands';
-// import FeaturedProducts from './components/FeaturedProducts'; 
-// import PromotionalBlock from './components/PromotionalBlock'
-// import Newsletter from './components/Newsletter';
-import Footer from './components/Footer';
+const FeaturedProducts = React.lazy(() => import('./components/FeaturedProducts'));
+// const PromotionalBlock = React.lazy(() => import('./components/PromotionalBlock'));
+// const Newsletter = React.lazy(() => import('./components/Newsletter'));
+const Footer = React.lazy(() => import('./components/Footer'));
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme';
-
 
 function App() {
 
@@ -34,19 +33,19 @@ function App() {
       <ThemeProvider theme={theme}>
         <Header />
         <MainBanner/>
+        {showModal && <Modal onClose={handleCloseModal} />}
         <main>
           <WhyBuy />
           <PartnerBrands />
-        {/* 
-          <FeaturedProducts />
-          <PromotionalBlock />
-          <Newsletter />
-        */}
+          <Suspense fallback={<div>Loading...</div>}>
+            <FeaturedProducts />      
+            {/* 
+              <PromotionalBlock />
+              <Newsletter />
+            */}
+          </Suspense>
         </main>
-        <Footer /> 
-
-        {showModal && <Modal onClose={handleCloseModal} />}
-      
+        <Footer />
       </ThemeProvider>
     </div>
   );

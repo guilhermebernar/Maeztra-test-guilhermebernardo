@@ -23,11 +23,10 @@ export const TitleWhyBuy = styled.h2`
 export const Card = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 20px;
-    padding: 16px 27px;
+    gap: 22px;
     border-radius: 4px;
     background: #EFEFEF;
-    padding: 16px 26px !important;
+    padding: 16px 16px !important;
     @media (min-width: 768px) {
 
     }
@@ -43,7 +42,7 @@ export const Content = styled.div`
     h3{
         color:#353535;
         font-family: Titillium Web;
-        font-size: 18px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -51,41 +50,22 @@ export const Content = styled.div`
     p{
         color: #000;
         font-family: Titillium Web;
-        font-size: 16px;
+        font-size: 10px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
     }
-
-    @media (max-width: 768px) {
-
-        
-        h3{
-            color:#353535;
-            font-family: Titillium Web;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-        p{
-            color: #000;
-            font-family: Titillium Web;
-            font-size: 10px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
-    }
 `;
 
 export const Icon = styled.img`
-    width: 50px;
+    width: 32px;
     height: 100%;
+    margin: auto 0 !important;
 
     @media (max-width: 768px) {
         width: 36px;
         height: 100%;
+        margin: auto 0 !important;
     }
 
 `
