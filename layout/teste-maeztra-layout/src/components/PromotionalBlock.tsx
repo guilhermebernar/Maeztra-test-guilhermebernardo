@@ -1,4 +1,4 @@
-import yourImage from '../assets/images/banner-cta.png';
+import bannerCta from '../assets/Images/banner-cta.png';
 import { ComponentContainer, TextSection, Title, Text, ImageSection } from '../styles/ResponsiveComponentStyle';
 
 const PromotionalBlock = () => {
@@ -10,7 +10,7 @@ const PromotionalBlock = () => {
         </Text>
       </TextSection>
       <ImageSection>
-        <img src={yourImage} alt="Nova Coleção de outono-inverno" />
+        <img src={bannerCta} alt="Nova Coleção de outono-inverno" />
       </ImageSection>
     </ComponentContainer>
   );
