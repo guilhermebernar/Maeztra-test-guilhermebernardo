@@ -6,7 +6,7 @@ import WhyBuy from './components/WhyBuy';
 import PartnerBrands from './components/PartnerBrands';
 const FeaturedProducts = React.lazy(() => import('./components/FeaturedProducts'));
 const PromotionalBlock = React.lazy(() => import('./components/PromotionalBlock'));
-// const Newsletter = React.lazy(() => import('./components/Newsletter'));
+const Newsletter = React.lazy(() => import('./components/Newsletter'));
 const Footer = React.lazy(() => import('./components/Footer'));
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme';
@@ -40,9 +40,7 @@ function App() {
           <Suspense fallback={<div>Loading...</div>}>
             <FeaturedProducts />      
             <PromotionalBlock />
-            {/* 
-              <Newsletter />
-            */}
+            <Newsletter />
           </Suspense>
         </main>
         <Footer />
