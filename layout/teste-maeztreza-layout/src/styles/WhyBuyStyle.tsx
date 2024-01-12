@@ -1,6 +1,5 @@
-// CREATE WhyBuyStyle.tsx
 import styled from 'styled-components'; 
-// WhyBuyContainer
+
 export const WhyBuyContainer = styled.div`
     margin: 30px auto 50px auto !important;
     width: 90%;

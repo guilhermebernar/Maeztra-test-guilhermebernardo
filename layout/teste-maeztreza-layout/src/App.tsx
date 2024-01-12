@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import Modal from './components/Modal';
 import Header from './components/Header';
 import MainBanner from './components/MainBanner'
-import PromoSection from './components/PromoSection';
-// import PartnerBrands from './components/PartnerBrands';
+import WhyBuy from './components/WhyBuy';
+import PartnerBrands from './components/PartnerBrands';
 // import FeaturedProducts from './components/FeaturedProducts'; 
 // import PromotionalBlock from './components/PromotionalBlock'
 // import Newsletter from './components/Newsletter';
@@ -35,9 +35,9 @@ function App() {
         <Header />
         <MainBanner/>
         <main>
-          <PromoSection />
-        {/* 
+          <WhyBuy />
           <PartnerBrands />
+        {/* 
           <FeaturedProducts />
           <PromotionalBlock />
           <Newsletter />
