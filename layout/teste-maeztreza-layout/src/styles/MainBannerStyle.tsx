@@ -11,6 +11,7 @@ export const MainBannerContainer = styled.div`
         background-repeat: no-repeat;
         width: 100%; 
         height: auto;
+        fill: #000;
     }
     h2{
         color: #FFF;
@@ -103,14 +104,7 @@ export const MainBannerContent = styled.div`
         width: 480px;
         flex-direction: column;
         gap: 20px;
-        &.swiper-pagination-bullet{
-            background: transparent !important;
-            border: 1px solid #FAA500 !important;
-        } 
 
-        &.swiper-pagination-bullet-active{
-            background: #FAA500 !important;
-        }
         @media (max-width: 768px) {
             position: absolute;
             top: 63px;
@@ -134,6 +128,7 @@ export const NavigationButton = styled.div`
     top: 50%;
     height: 20px;
     width: 32px;
+    z-index: 1!important;
   } 
   &.swiper-button-next {
     background: none;
@@ -143,6 +138,7 @@ export const NavigationButton = styled.div`
     top: 50%;
     height: 20px;
     width: 32px;
+    z-index: 1!important;
   }
   &.swiper-button-prev:after, &.swiper-button-next:after{
     display: none;
@@ -150,17 +146,21 @@ export const NavigationButton = styled.div`
 
   @media (max-width: 768px) {
     &.swiper-button-prev{
+    position: absolute !important;
     left: 20px;
     height: 20px;
     width: 32px;
+    z-index: 1!important;
   } 
   &.swiper-button-next {
+    position: absolute !important;
     background: none;
     cursor: pointer;
     position: absolute;
     right: 20px;
     height: 20px;
     width: 32px;
+    z-index: 1!important;
   }
   }
 `;

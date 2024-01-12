@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Modal from './components/Modal';
 import Header from './components/Header';
 import MainBanner from './components/MainBanner'
-// import PromoSection from './components/PromoSection';
+import PromoSection from './components/PromoSection';
 // import PartnerBrands from './components/PartnerBrands';
 // import FeaturedProducts from './components/FeaturedProducts'; 
 // import PromotionalBlock from './components/PromotionalBlock'
@@ -34,15 +34,15 @@ function App() {
       <ThemeProvider theme={theme}>
         <Header />
         <MainBanner/>
-        {/* 
         <main>
           <PromoSection />
+        {/* 
           <PartnerBrands />
           <FeaturedProducts />
-        </main>
-        <PromotionalBlock />
-        <Newsletter />
+          <PromotionalBlock />
+          <Newsletter />
         */}
+        </main>
         <Footer /> 
 
         {showModal && <Modal onClose={handleCloseModal} />}

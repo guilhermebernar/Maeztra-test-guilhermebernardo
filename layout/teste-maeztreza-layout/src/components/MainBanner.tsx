@@ -11,12 +11,10 @@ import bannerMobile from '../assets/Images/banner-mob.jpeg';
 import { MainBannerContainer, NavigationButton, MainBannerContent } from '../styles/MainBannerStyle';
 
 const MainBanner = () => {
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
     const [bannerImage, setBannerImage] = useState(banner);
   
     useEffect(() => {
       function handleResize() {
-        setIsDesktop(window.innerWidth >= 768);
         setBannerImage(window.innerWidth >= 768 ? banner : bannerMobile);
       }
   
@@ -37,7 +35,7 @@ const MainBanner = () => {
           }}
           pagination={{ clickable: true }}
         >
-          {[...Array(3)].map((_, index) => (
+          {[...Array(5)].map((_, index) => (
             <SwiperSlide key={index}>
               <div style={{ position: 'relative' }}>
                 <img src={bannerImage} alt="Promoções de Outono" />

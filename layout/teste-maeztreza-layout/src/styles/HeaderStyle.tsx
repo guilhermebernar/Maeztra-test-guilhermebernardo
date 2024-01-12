@@ -238,7 +238,7 @@ export const MobileNavMenu = styled.nav`
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.white};
   transition: left 0.3s ease-in-out;
-  z-index: 10;
+  z-index: 99999;
   img{
     position: absolute;
     top: 20px;
